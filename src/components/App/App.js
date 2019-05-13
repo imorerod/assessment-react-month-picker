@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
+import MonthList from '../MonthList/MonthList';
 
 class App extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
       months: []
     }
@@ -43,6 +44,7 @@ class App extends Component {
         </header>
         <br/>
         <p>List of months goes here</p>
+        <MonthList months={this.state.months} />
       </div>
     );
   }
